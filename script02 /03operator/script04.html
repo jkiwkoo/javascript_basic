@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>결합연산자</title>
+</head>
+<body>
+  <script>
+    //결합, 산술
+    console.log('결합,산술');
+    console.log(3 + 4); // 산술 // 넘버형 // 7
+    console.log(3 + 4+ '5'); // 산술 -> 결합 // 스트링 // 75
+    console.log('10' + 3 + 4); // 결합 -> 결합 // 스트링 // 1034 
+    console.log(3 + 4 + '5' + 3 + 5); // 산술 -> 결합 -> 결합 -> 결합 // 스트링 // 7535
+    console.log(3 + true); // 넘버형 // 4
+    console.log(3 + false); // 넘버형 // 3
+    // true = 1
+    // false = 0
+
+    const main = 5;
+    console.log(3 + main); // 산술 // 넘버형 // 8
+    console.log((3 + 4) + '5' + (3 + 5)); // 묶으면 결합 다음이더라도 산술 가능하므로 // 758 임
+
+  </script>
+  <script>
+    // 연결 연산자
+    const sum = 20;
+    const str = 'flower';
+    console.log(sum , str); // 20 'flower'
+    console.log(sum + str); // 20flower 
+    document.write(sum , str, '<br>'); 
+    console.log(3 + 5 , '5' , 3 + 5); // 8'5'8
+  </script>
+  <script>
+    // 배틱 => 스트링 출력
+    console.log('배틱');
+    const sum1 = 30;
+    const sum2 = 'flower';
+    let i = 11;
+    console.log(`string ${5 * 3} ${sum2} 지리산`);
+    console.log('string' + (5 * 3) + sum2 + '지리산');
+    console.log(`설악산 ${sum2} : ${sum1 * 2} : ${i}`);
+    
+    document.write(
+      `
+      <p>
+    <img src="../img/car${i}.jpg" alt="${sum2}">
+      </p>
+      `
+    )
+ 
+    // `` : 영역 만들기 -> 특별한 데이터가 필요한 경우 ; ${} 으로 영역을 구분함.
+    // 숫자 계산, 변수 작업, 식계산
+  </script>
+  
+  
+  
+  
+  <script>
+// 다른 데이터형들이 있을 때, 같이 작업을 하는 경우 사용.
+// + , 출력 -> string, number
+// + 가 산술 연산자인지, 결합 연산자인지? (거의 대부분이 결합일 가능성이 있음)
+// 산술 -> 연산자의 양쪽이 넘버형인 경우, ex : 2 + 3  -> 5 -> number 임
+// 연산자 앞 쪽에 결합 -> 그 다음은 쭉 결합 2 + 3 + '지리산' = 5지리산 -> string 임
+// 2 + 3 + '3' + 2 + 3 = 5323 -> string 임
+// '지리산' + 3 = 지리산3
+  </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수의 기본 형식</title>
+</head>
+<body>
+  <script>
+    // 이름있는 함수
+    function num (a){
+      let result = a * 3;
+      return result;
+    }
+    console.log(num(30));
+
+    // 이름 없는 함수
+const room = function(b){
+  let result = b / 5;
+  return result;
+}
+console.log(room(10));
+
+    // 함수식
+//함수식 1  ((){})()
+(function(a){
+  let result = a * 45;
+  console.log(`함수식1 ${result}`)
+})(3);
+
+//함수식 2 ((){}())
+(function(b){
+  let result = b * 2;
+  console.log(`함수식2 ${result}`)
+}(5));
+
+
+//함수식 3
+const sub = (function(){
+  let result = 3 * 5;
+  return result;
+})()
+console.log(sub);
+
+  </script>
+</body>
+</html>

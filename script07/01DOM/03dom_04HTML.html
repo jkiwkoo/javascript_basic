@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>creatElement</title>
+
+  </head>
+  <body>
+    <p><button type="button">추가</button></p>
+    <div id="content">
+      <div>
+        <h1>오늘 할 일</h1>
+        <ol id="today">
+          <li>javascript</li>
+          <li>html</li>
+          <li>css</li>
+        </ol>
+        <h1>내일 할 일</h1>
+        <ol id="tomorrow">
+          <li>청소</li>
+          <li>뮤지컬 공연 예매</li>
+          <li>휴식</li>
+        </ol>
+      </div>
+    <script>
+      const today = document.querySelector('#today');
+      // 없던 것을 만들기
+      const last  = document.createElement('li');
+      console.log(last);
+      // 절차
+      // last.textContent = '마지막 일';
+      last.prepend('마지막일');
+
+      //등록
+      today.append(last);
+
+      
+
+      const btn = document.querySelector('button');
+      const tom = document.querySelector('#tomorrow');
+      btn.onclick = play;
+
+      function play(){
+        const el = document.createElement('li');
+        el.textContent = '첫번째 일';
+        tom.prepend(el);
+      }
+
+
+      //클론 가즈아
+      const clone = tomorrow.cloneNode(true);
+      console.log(clone);
+
+      document.querySelector('body').append(clone);
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

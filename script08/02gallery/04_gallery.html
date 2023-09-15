@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>스크롤 갤러리1</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+  <!-- 보이기 담당 : overflow:hidden -->
+<div id="mas">
+  <!-- 움직임 담당 : 전체 움직임 -->
+<div id="gall">
+  <!-- 소스 -->
+  <ul class="box">
+  <li>01</li>
+  <li>02</li> 
+  <li>03</li></ul>
+</div>
+
+<div id="left"><a href="#">prev</a></div>
+<div id="right"><a href="#">next</a></div>
+</div>
+<script>
+const prev = document.querySelector('#left');
+const next = document.querySelector('#right');
+const gall = document.querySelector('#gall');
+const li = document.querySelectorAll('li');
+
+let start = 0;
+let speed = -1;
+let mTime;
+
+//소스 만들기
+let temp = document.querySelector('.box').cloneNode(true);
+gall.append(temp);
+
+//이벤트
+prev.addEventListener('click',function(){speed = -1});
+next.addEventListener('click',function(){speed = 1});
+
+li.forEach(function(item){
+  item.addEventListener('mouseover',stop)
+});
+
+li.forEach(function(item){
+  item.addEventListener('mouseout',play)
+});
+
+//기본작동
+play();
+
+//타이머
+function motion(){
+  start += speed;
+  if(start < -300){
+    start = 0;
+  } else if(start > 0){
+    start = -300;
+  }
+  gall.style.left = start +'px';
+}
+
+function play(){
+  mTime = setInterval(motion, 30);
+}
+
+function stop(){
+  clearInterval(mTime);
+}
+
+
+
+</script>
+</body>
+</html>

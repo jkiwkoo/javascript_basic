@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>creatElement</title>
+
+  </head>
+  <body>
+    <div id="content">
+      <h2 id="title-1">List01</h1>
+      <ul id="list-1">
+        <li>no01</li>
+        <li>no02</li>
+        <li>no03</li>
+        <li>no04</li>
+        <li>no05</li>
+        <li>no06</li>
+        <li>no07</li>
+
+      </ul>
+      <h2 id="title-2">list02</h1>
+      <ul id="list-2">
+        <li>sum01</li>
+        <li>sum02</li>
+        <li>sum03</li>
+        <li>sum04</li>
+        <li>sum05</li>
+        <li>sum06</li>
+        <li>sum07</li>
+      </ul>
+    </div>
+    <script>
+    const myTag = document.querySelector('#list-1');
+    console.log(myTag.children)
+    myTag.firstElementChild.style.color = 'yellow';
+    myTag.children[1].style.color = 'orange';
+    myTag.lastElementChild.style.color = 'pink';
+    
+    myTag.parentElement.style.backgroundColor = 'gray';
+    console.log(myTag.parentElement.nextElementSibling);
+
+
+    </script>
+  </body>
+</html>

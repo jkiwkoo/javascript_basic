@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* 보이는 크기:overflow:hidden :  */
+#mas {position:relative;
+	margin: 100px auto;
+	width: 300px; height: 150px;
+	border:dashed 2px #FC6;
+	/* overflow:hidden; */
+}
+/* 소스전체 :움직임담당*/
+#gall {position: absolute;
+	left: 0px; top: 20px;
+	width: 600px; height: 100px; }
+/* 소스크기 */
+#gall>ul { float:left;
+	width: 300px; height: 100px;
+	background:#0CC;}
+/* ? */
+#gall>ul>li { float:left;
+	margin-right:10px;
+	margin-top:5px;
+	width:90px; height:90px;
+	background:#FF6; }
+
+#left { position: absolute;
+	left: 0px; top: 130px;
+	width: 50px; height: 20px;
+	z-index: 10; background: #FF0;
+	text-align:center; }
+#right { position: absolute;
+	right: 0px; top: 130px;
+	width: 50px; height: 20px;
+	z-index: 10; background: #FF0; text-align:center;}

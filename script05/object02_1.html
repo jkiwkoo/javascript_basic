@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function newBook(name, price, level, hap) {
+                const book = {
+                    name, //name:name,
+                    price, //price:price.
+
+                    level, //level:level,
+                    hap, //hap:hap,
+                    info() {
+                        document.write(
+                            `itbook : ${this.name} : ${this.price}원 : ${this.hap} 입니다.<br>`
+                        );
+                    },
+                };
+                return book;
+            }
+            const book1 = newBook('javascript', 10000, 1, 10);
+            const book2 = newBook('html', '2000', 1, 10);
+            const book3 = newBook('react', 30000, 3, 20);
+
+            book1.info();
+            book2.info();
+            book3.info();
+        </script>
+    </body>
+</html>

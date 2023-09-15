@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 객체1</title>
+    <link rel="stylesheet" href="css/box.css"></head>
+<body>
+    <script>
+        const picture = new  Object();
+            picture.pic = 'images/pic01.jpg';
+            picture.title = '에펠탑의 신랑신부';
+            picture.artist = '마르크 샤갈';
+            picture.year = 1938;
+            picture.info = function(){
+                document.write(
+                    `
+                    <dl>
+                    <dt>${picture.title}</dt>
+                    <dd><img src=${picture.pic} alt=${picture.title}></dd>
+                    <dd>${picture.artist}</dd>
+                    <dd>${picture.year}</dd>
+                    </dl>
+                    `
+                )
+            }
+            picture.info();
+     
+    </script>
+</body>
+</html>
+<!-- images/pic01.jpg 
+        에펠탑의 신랑신부 
+        마르크 샤갈 
+        1938 -->

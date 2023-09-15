@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>addEventListener,removeEventListener</title>
+ <style>
+  section{
+   width:800px; margin: 50px auto 0;
+   border:3px solid #666;
+   padding:40px 0;}
+   p{text-align:center;}
+  button{width:120px; 
+  margin: 0 auto 50px;
+  font:bold 20px Arial,sans-serif;
+  color:#0c3177;
+  border:1px solid #666;}
+  div{
+   width: 300px; 
+   font:20px/50px Arial,sans-serif;
+   color:red;
+   border:1px solid #ddd;
+   margin: 0 auto;
+   text-align:center;
+  }
+ </style>
+</head>
+<body>
+ <section>
+  <p>
+   <button type="text">버튼1</button> 
+  </p>
+  <div>0</div>
+ </section>
+<script>
+const btn = document.querySelector('button');
+let num = 0;
+btn.addEventListener('click',play);
+btn.addEventListener('click',text);
+
+function play(){
+    document.querySelector('div').innerHTML = ++ num;
+}
+
+function text(){
+    console.log('welcome');
+}
+
+</script>
+
+</body>
+</html>

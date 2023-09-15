@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>기본움직임</title>
+<style>
+body { font:12px "나눔고딕"; }
+#box { position: absolute; left: 0px; top: 100px; width: 100px; height: 100px; background:#0cf; }
+</style>
+
+</head>
+<body >
+ <button type="text" class="play">play</button>
+ <button type="text" class="stop">stop</button> 
+
+<div id="box">box</div>
+<script>
+const bPlay = document.querySelector('.play');
+const bStop = document.querySelector('.stop');
+const box = document.querySelector('#box');
+
+let i = 0;
+let pMove;
+
+bPlay.addEventListener('click',play);
+bStop.addEventListener('click',stop);
+
+//타이머 함수
+function move(){
+    i += 1;
+    box.style.left = i + 'px';
+}
+
+function play(){
+    pMove = setInterval(move,30);
+}
+
+function stop(){
+    clearInterval(pMove);
+}
+
+
+
+
+</script>
+</body>
+</html>

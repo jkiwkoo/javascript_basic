@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>btn 객체 변경</title>
+        <link rel="stylesheet" href="./css/box.css" />
+    </head>
+    <body>
+        <div>
+            <button type="button">pic01</button>
+            <button type="button">pic02</button>
+            <button type="button">pic03</button>
+            <button type="button">pic04</button>
+        </div>
+
+        <dl>
+            <dt>에펠탑의 신랑신부</dt>
+            <dd>
+                <img src="./images/pic01.jpg" alt="에펠탑의 신랑신부" />
+            </dd>
+            <dd>마르크 샤갈</dd>
+            <dd>1938</dd>
+        </dl>
+
+        <script>
+            function Picture(pic, title, artist, year) {
+                this.pic = pic;
+                this.title = title;
+                this.artist = artist;
+                this.year = year;
+            }
+
+            Picture.prototype.action = function () {
+                document.querySelector('dl>dt').innerHTML = this.title;
+                document.querySelector('dl>dd>img').setAttribute('src', this.pic);
+                document.querySelector('dl>dd>img').setAttribute('alt', this.title);
+                document.querySelector('dl>dd:nth-child(3)').innerHTML = this.artist;
+                document.querySelector('dl>dd:nth-child(4)').innerHTML = this.year;
+            };
+
+            const myPic = [
+                new Picture('images/pic01.jpg', '에펠탑의 신랑신부', '마르크 샤갈', 1938),
+                new Picture('images/pic02.jpg', '여인2', '피카소', 1937),
+                new Picture('images/pic03.jpg', '발레수업', '드가', 1871),
+                new Picture('images/pic04.jpg', '피아노치는소녀', '누아르', 1989),
+            ];
+
+            const btn = document.querySelectorAll('button');
+            btn.forEach(function (item, index) {
+                item.onclick = function () {
+                    myPic[index].action();
+                };
+            });
+        </script>
+
+        <!-- 
+'images/pic01.jpg', '에펠탑의 신랑신부', '마르크 샤갈', 1938
+'images/pic02.jpg', '여인2', '피카소', 1937
+'images/pic03.jpg', '발레수업', '드가', 1871 
+'images/pic04.jpg', '피아노치는소녀', '오귀스트 르누아르', 1989  
+     -->
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>DOM</title>
+        <style media="screen">
+            .cta {
+                padding: 3em;
+                background: #b51c35;
+                text-align: center;
+            }
+
+            .cta a {
+                padding: 0 0.5em;
+                font-size: 2em;
+                font-weight: 900;
+                color: #fffced;
+                text-decoration: none;
+                border: 5px solid #fffced;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cta">
+            <a href="#">DOM TEST</a>
+        </div>
+        <script>
+            document.querySelector('.cta>a').setAttribute('target', '_blank');
+            document.querySelector('.cta>a').setAttribute('href', 'https://www.google.com');
+
+            // 값을 넣을 장소 생성
+            let main;
+            // 값을 가져오기
+            main = document.querySelector('.cta>a').getAttribute('href');
+            // 장소에 값이 잘 들어갔는지 콘솔로그로 확인
+            console.log(main);
+
+            //일반속성 변경
+            //document.querySelector('스타일선택자명').setAttribute('속성명','값')
+            //document.querySelector('스타일선택자명').geyAttribute('속성명')
+        </script>
+    </body>
+</html>

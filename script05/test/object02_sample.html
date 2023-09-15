@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 객체2</title>
+    <link rel="stylesheet" href="css/box.css">
+</head>
+<body>
+    <script>
+       /* function newPicture(pic,title,artist,year){
+            const picture = {
+                pic, 
+                title, 
+                artist, 
+                year, 
+                info(){
+                    document.write(
+                    `
+                    <dl>
+                        <dt>${this.title}</dt>
+                        <dd><img src=${this.pic} alt=${this.title}></dd>
+                        <dd>${this.artist}</dd>
+                        <dd>${this.year}</dd>
+                    </dl>
+                    `
+                    )
+                }
+            }     
+            return picture;
+        }
+        const picture1 = newPicture('images/pic01.jpg', '에펠탑의 신랑신부', '마르크 샤갈', 1938);
+        const picture2 = newPicture('images/pic02.jpg', '여인2', '피카소', 1937);
+        const picture3 = newPicture('images/pic03.jpg', '발레수업', '드가', 1871 );
+        const picture4 = newPicture('images/pic04.jpg', '피아노치는소녀', '오귀스트 르누아르', 1989  );
+
+        picture1.info();
+        picture2.info();
+        picture3.info();
+        picture4.info(); */
+
+
+
+        function newPicture(pic,title,artist,year){
+            const picture = {
+                pic,
+                title,
+                artist,
+                year,
+                info(){
+                    document.write(
+                    `
+                    <dl>
+                        <dt>${this.title}</dt>
+                        <dd><img src=${this.pic} alt=${this.title}></dd>
+                        <dd>${this.artist}</dd>
+                        <dd>${this.year}</dd>
+                    </dl>
+                    `
+                    )
+                }
+            }
+            return picture;
+        }
+
+        const picture1 = newPicture('images/pic01.jpg', '에펠탑의 신랑신부', '마르크 샤갈', 1938);
+        const picture2 = newPicture('images/pic02.jpg', '여인2', '피카소', 1937);
+        const picture3 = newPicture('images/pic03.jpg', '발레수업', '드가', 1871);
+        const picture4 = newPicture('images/pic04.jpg', '피아노치는소녀', '오귀스트 르누아르', 1989);
+
+        picture1.info();
+        picture2.info();
+        picture3.info();
+        picture4.info();
+  
+      
+
+    </script>
+</body>
+</html>
+
+
+
+<!-- 
+'images/pic01.jpg', '에펠탑의 신랑신부', '마르크 샤갈', 1938
+'images/pic02.jpg', '여인2', '피카소', 1937
+'images/pic03.jpg', '발레수업', '드가', 1871 
+'images/pic04.jpg', '피아노치는소녀', '오귀스트 르누아르', 1989  
+     -->

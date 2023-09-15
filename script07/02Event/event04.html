@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>addEventListener,removeEventListener</title>
+ <style>
+  section{width:500px; 
+  margin: 0 auto;
+  border: 1px solid blue;}
+  div,p {
+    margin: 10px;
+    border: 1px solid blue;
+  }
+</style>
+</head>
+<body>
+ <!-- 이러한 작업을 버블링 막기 -->
+
+
+ <section >section
+  <div>DIV
+    <p>P</p>
+  </div>
+ </section>
+<script>
+  const sec = document.querySelector('section');
+  const div = document.querySelector('div');
+  const p = document.querySelector('p');
+
+  // sec.addEventListener('click',function(){console.log('section')});
+  // div.addEventListener('click',function(){console.log('div')});
+  // p.addEventListener('click',function(){console.log('p')});
+
+  sec.addEventListener('click',function(e){play(e,'section')});
+  div.addEventListener('click',function(e){play(e,'div')});
+  p.addEventListener('click',function(e){play(e,'p')});
+
+  function play(e,str){
+    console.log(str);
+    console.log(e.type);
+    console.log(e.target);
+    console.log(e.currentTarget);
+    e.stopPropagation();
+  }
+
+
+
+
+
+</script>
+</body>
+</html>

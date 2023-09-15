@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>move</title>
+  <style type="text/css">
+    #box { position: absolute; left: 0px; top: 200px; width: 50px; height: 50px; z-index: 1; background-color: #0066FF; }
+    p{display:block; width:150px;
+        font:bold 25px/50px Arial,sans-serif;
+        color:#fff;
+        background-color:rgb(255, 60, 0);
+        text-align:center;}
+    </style>
+
+</head>
+<body>
+<p href="#">버튼</p>
+<div id="box"></div>
+<script>
+const btn = document.querySelector('p');
+const box = document.querySelector('#box');
+
+let i = 0;
+let pMove;
+play();
+//이벤트
+btn.addEventListener('mouseover',stop);
+btn.addEventListener('mouseout',play);
+
+
+//함수
+function move(){
+  box.style.left = ++i + 'px';
+}
+
+//타이머 실행
+function play(){
+  pMove = setInterval(move,30);
+}
+
+//타이머 중지
+function stop(){
+  clearInterval(pMove);
+}
+
+
+console.log(pMove);
+
+
+</script>
+</body>
+</html>

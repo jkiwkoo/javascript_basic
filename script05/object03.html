@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>생성자함수</title>
+
+</head>
+
+<body>
+    <script>
+        function Book(title,author,year){
+            this.title = title,
+            this.author = author,
+            this.year = year,
+            this.info = function(){
+                document.write(
+                    `
+                    <p>${this.title} : ${this.author} : ${this.year}</p>
+                    `
+                )
+            }
+        }
+    
+        const book1 = new Book('포토샵', '작가1', 2020);
+        const book2 = new Book('자바스크립트', '작가2', 2021);
+        const book3 = new Book('리액트', '작가3', 2023);
+    
+        book1.info();
+        book2.info();
+        book3.info();
+
+
+
+        //포로토타입
+
+        
+        function It(title,author,year){
+            this.title = title;
+            this.author = author;
+            this.year = year;
+        }
+
+        It.prototype.info = function(){
+            document.write(
+                    `<p>${this.title} : ${this.author} : ${this.year}</p>`
+                )
+        }
+        const myBook = [
+            new It('포토샵', '작가1', 2020),
+            new It('자바스크립트', '작가2', 2021),
+            new It('리액트', '작가3', 2023),
+        ]
+    
+        
+        for(let i of myBook){
+            i.info();
+        }
+
+
+
+
+
+
+      
+    </script>
+
+
+
+</body>
+
+
+
+</html>

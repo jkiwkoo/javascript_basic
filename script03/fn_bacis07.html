@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>인수</title>
+<script>
+
+</script>
+</head>
+<body>
+<button type="button" value="개나리" id="btn01">개나리</button>
+<button type="button" value="무궁화" id="btn02">무궁화</button>
+<button type="button" value="유채꽃" id="btn03">유채꽃</button>
+<button type="button" value="유채꽃" id="btn04">튤립</button>
+<button type="button" value="유채꽃" id="btn05">장미</button>
+<button type="button" value="유채꽃" id="btn06">민들레</button>
+<button type="button" value="유채꽃" id="btn07">해바라기</button>
+
+<script>
+const btn01 = document.querySelector('#btn01');
+const btn02 = document.querySelector('#btn02');
+const btn03 = document.querySelector('#btn03');
+const btn04 = document.querySelector('#btn04');
+const btn05 = document.querySelector('#btn05');
+const btn06 = document.querySelector('#btn06');
+const btn07 = document.querySelector('#btn07');
+
+btn01.onclick = function(){flower('개나리');}
+btn02.onclick = function(){flower('무궁화');}
+btn03.onclick = function(){flower('유채꽃');}
+btn04.onclick = function(){flower('튤립');}
+btn05.onclick = function(){flower('장미');}
+btn06.onclick = function(){flower('민들레');}
+btn07.onclick = function(){flower('해바라기');}
+
+function flower(str){
+  switch(str){
+    case '개나리' : alert('너 개나리충 맞음 ㅇㅇ');
+    break;
+    case '무궁화' : alert('너 무궁화충 맞음 ㅇㅇ');
+    break;
+    case '유채꽃' : alert('너 유채꽃충 맞음 ㅇㅇ');
+    break;
+    case '튤립' : alert('너 튤립충 맞음 ㅇㅇ');
+    break;
+    case '장미' : alert('너 장미충 맞음 ㅇㅇ');
+    break;
+    case '민들레' : alert('너 민들레충 맞음 ㅇㅇ');
+    break;
+    case '해바라기' : alert('너 해바라기충 맞음 ㅇㅇ');
+  }
+}
+</script> 
+
+
+
+<!-- <script>
+function 무궁화(str){
+    alert('무궁화 동호회를 추천 합니다.')
+}
+
+function 장미(str){
+    alert('무궁화 동호회를 추천 합니다.')
+}
+
+function 국화(str){
+    alert('무궁화 동호회를 추천 합니다.')
+}
+</script> -->
+<!--버튼클릭->함수 order에 '무궁화'보내기
+ 버튼클릭->함수 order에 '장미'보내기 
+버튼클릭->함수 order에 '국화'보내기-->
+</body>
+</html>

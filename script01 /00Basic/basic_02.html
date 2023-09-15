@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>문장만들기1</title>
+    </head>
+    <body>
+        <button type="button">버튼</button>
+        <article id="info">
+            <h4>나의 이름은</h4>
+            <dl>
+                <dt>Name</dt>
+                <dd>Hong Gill-Dong</dd>
+                <dt>Birth</dt>
+                <dd>2020.03.01</dd>
+                <dt>Residence</dt>
+                <dd class="sub next">Seoul Korea</dd>
+                <dt>Major</dt>
+                <dd>Web Design / Publishing</dd>
+                <dt>Skills</dt>
+                <dd>Photoshp, Illustrator,Html5, CSS3, Javascript, jQuery</dd>
+            </dl>
+        </article>
+        <script>
+            /*   문장 만들기
+              오브젝트+매서드( )
+              체인연결하기
+              오브젝트+ 속성
+              오브젝트+ 속성 = 값; */
+
+            /* 스타일 속성 사용하기:
+            getElementById('아이디명').style.속성명="값";
+            querySelector('스타일').style.속성명 ='값'; */
+
+            document.getElementById('info').style.color = '#fff';
+            document.querySelector('#info').style.backgroundColor = 'blue';
+
+            /* class 속성+ 매서드 변경하기: 속성
+            document.querySelector('스타일선택자').classList.add('클래스명')
+            document.querySelector('스타일선택자').classList.remove('클래스명'); */
+
+            document.querySelector('#info').classList.add('pic');
+            document.querySelector('.sub').classList.remove('next');
+        </script>
+    </body>
+</html>

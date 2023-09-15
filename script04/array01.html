@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>forEach()</title>
+</head>
+<body>
+ <script>
+const num = [1,2,3,4,5];
+num.forEach(function(item,index,array){
+document.write(
+    `${index} : ${index} <br>`
+);
+console.log(array);
+})
+
+const str = ['감자','탄','멍맹이','멍때리기'];
+str.forEach(function(love,num){
+    document.write(
+        `<p>
+            ${num + 1} 번째 좋아하는 것은? ${love} 입니다. </p>`
+    )
+})
+
+const str1 = ['탄','감자','멍멍이','찌뱅년','똥꾸멍'];
+
+str1.forEach(function(a,b){
+    document.write(
+        `<p>${b + 1} 번째 좋아하는 것은??? ${a} 입니다.</p>`
+    )
+})
+
+const str2 = ['탄','감자','이한솔','오지우','멍총이'];
+str2.forEach(function(a,b){
+    document.write(
+        `<p>${b+1} 번째 멍청이는 ${a} 입니다.</p>`
+    )
+})
+
+const str3 = ['탄', '감자', '이한솔', '오지우', '맹청이']
+str3.forEach(function(a,b){
+    document.write(
+        `<p>${b} 번째 똥꾸멍은 ${a} 입니다. </p>`
+    )
+})
+
+const str4 = ['탄','감자','이한솔','오지우','맹청이']
+str4.forEach(function(a,b){
+    document.write(
+        `<p>${b}번째 고치뱅뱅이는 ${a} 입니다. </p>`
+    )
+})
+
+const str5 = ['탄','감자','이한솔','오지우','개똥이']
+str5.forEach(function(a,b){
+    document.write(
+        `<p>${b}번째 똥꼬뱅뱅이는 ${a} 입니다.</p>`
+    )
+})
+
+const str6 = ['탄','감자','이한솔','오지우','개똥이']
+str.forEach(function(a,b){
+    document.write(
+        `<p>${b}번째 똥꼬배리배리는 ${a} 입니다.</p>`
+    )
+})
+
+ </script>
+</body>
+</html>

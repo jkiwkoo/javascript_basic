@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>논리</title>
+    </head>
+    <body>
+        <script>
+            let id = 'abc';
+            let pw = '1004';
+
+            let userId = 'abc';
+            let userPw = '1000';
+
+            console.log(id === userId && pw === userPw); // false
+            console.log(id === userId || pw === userPw); // true
+
+            let com = true;
+            console.log(!com); // false
+            console.log(com === !com); // false
+            console.log((com = !com)); // false
+            console.log(com); // false
+            console.log(!!com); // false
+            console.log(com); // false
+        </script>
+    </body>
+</html>

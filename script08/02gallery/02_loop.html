@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>왕복운동</title>
+<style>
+body { font:12px "나눔고딕"; }
+#wrap { position:relative; margin:0 auto; width:800px; height:400px; border:1px dashed orange; }
+#box { position: absolute; left:0px; top: 100px; width: 50px; height: 50px; background:#0CC; }
+</style>
+
+</head>
+<body >
+
+<div id="wrap">
+      <div id="box"></div>
+</div>
+<script>
+const box = document.querySelector('#box');
+
+let start = 0;
+let speed = 3;
+
+setInterval(move,30);
+
+
+
+function move(){
+      start += speed;
+      if(start > 750){
+      //speed = -3;
+      speed *= -1;
+}
+else if(start < 0){
+      //speed = 3;
+      speed *= -1;
+}
+    box.style.left = start + 'px';
+}
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!--  -->

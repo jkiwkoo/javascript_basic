@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 객체 만들기
+    const str1 = new String('welcome');
+    const str2 = 'javascript';
+    console.log(str1);
+    console.log(str2);
+    console.log(str1.length);
+    console.log(str1[2]);
+    console.log(str2.length);
+    console.log(str2[3]);
+
+// charAt():harAt() 함수는 문자열에서 인자로 넘긴 index에 해당하는 문자형 데이터를 반환해주는 함수
+    
+const str3 = 'hello';
+console.log(str3.charAt(1));
+
+
+
+
+//  IndexOf() / lastIndexOf()
+
+const str4 = 'Hello World Sample Javascript';
+console.log(str4.indexOf('World'));
+console.log(str4.lastIndexOf('Javascript'));
+console.log(str4.lastIndexOf('aaa'));
+console.log(str4.indexOf('aaa'));
+
+
+
+
+
+/*  String.indexOf("찾을 문자", index);
+    String.lastIndexOf("찾을 문자"); 
+    일치하는 문자를 찾지 못하면 -1
+    */
+
+
+// replace():최초에 일치하는 문자
+// String.replace("찾을 문자", "치환할 문자");
+const str5 = 'Hello Javascript';
+console.log(str5.replace('Hello','Hi'));
+console.log(str5);
+
+
+
+// String.concat("합칠 문자열"):concat() 함수는 인자로 넘기는 문자열을 기존 문자열 뒤에 합치는 함수입니다. 
+const str6 = 'Hello';
+const str7 = 'Javascript';
+console.log(str6.concat(str7));
+console.log(str6);
+
+// trim()
+const str8 = '                 hello hello                  low';
+console.log(str8);
+console.log(str8.length);
+console.log(str8.trim());
+
+// toLowerCase() / toUpperCase()
+const str9 = 'JAVASCRIPT';
+const str10 = 'hello';
+console.log(str9.toLowerCase());
+console.log(str10.toUpperCase());
+console.log(str9);
+
+
+
+// split()
+const str11 = 'hello/javascript'; 
+const str12 = str11.split('/');
+console.log(str12);
+console.log(str12[0]);
+console.log(str12[1]);
+console.log(typeof str12);
+
+
+//string.substring(startindex,endindex 앞까지)
+//string.substr(startindex, end 의 문자 갯수까지)
+
+const str13 = 'hello world';
+console.log(str13.substring(0,5));
+console.log(str13.substr(7,3));
+
+
+
+
+
+
+  </script>
+</body>
+</html>

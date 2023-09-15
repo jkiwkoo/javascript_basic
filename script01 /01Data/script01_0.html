@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>데이터 할당</title>
+    </head>
+    <body>
+        <p>sample</p>
+        <script>
+            //변수 -> 선언 -> 초기화
+            let main;
+            main = 'welcome';
+
+            console.log(main);
+
+            // 2. 단축
+            let num = 5;
+            let sum = 10;
+
+            console.log(num + sum);
+
+            // 3. 메모리 -> 데이터 여러 데이터
+            let sam = '123';
+            let no = 123;
+
+            console.log(sam + no);
+            console.log(sam * no);
+
+            // 4. 재할당 -> 할당 값을 변경 / const 는 변경 안 됨.
+            let dif = 'welcome';
+            console.log(dif);
+            dif = 'love';
+            console.log(dif);
+
+            // 5. 재할당이 불가능한 경우 (상수) ; const 는 재할당이 안 됩니다.
+            const str = 5;
+            str = 'love';
+            // 에러 남.
+        </script>
+    </body>
+</html>

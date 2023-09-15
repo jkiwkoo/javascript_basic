@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Object</title>
+    </head>
+    <body>
+        <script>
+            const book = new Object();
+            //속성
+            book.name = 'javascript';
+            book.level = 1;
+            book.price = 10000;
+            book.hap = 100;
+
+            book.info = function () {
+                document.write(
+                    `<p>${book.name} 는 ${book.price}원 입니다.</p>`
+                );
+            };
+            book.event = function () {
+                document.write(`<p> 현재 판매 인원 : ${book.hap}</p>`);
+            };
+            book.plus = function () {
+                book.hap++;
+            };
+            book.info();
+            book.event();
+            book.plus();
+            book.plus();
+            book.plus();
+            book.plus();
+            book.plus();
+            book.plus();
+            book.plus();
+            book.event();
+        </script>
+    </body>
+</html>

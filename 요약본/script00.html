@@ -1,0 +1,1154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>start</title>
+<!--외부 스크립트 넣기-->
+<script src="경로 연결"></script>
+</head>
+
+<body>
+<!--내부 스크립트 넣기-->
+<script>
+// 코드 작성
+// '헤드에 넣는 경우는 먼저 읽어야 하는 정보들이 있을 경우.'
+// '바디가 끝나기 전에 정리해서 모아서 넣음.'
+</script>
+
+
+
+<script>
+/*
+get : 가져오기
+set : 설정하기
+*/
+</script>
+
+
+<!-- 요약 1 -->
+<script>
+    /* 스타일 속성 사용하기:
+getElementById('아이디명').style.속성명="값";
+querySelector('스타일').style.속성명 ='값'; */
+
+    document.getElementById('info').style.color = 'red';
+    document.querySelector('#info').style.backgroundColor = 'yellow';
+
+/* class 속성+ 매서드 변경하기: 속성
+document.querySelector('스타일선택자').classList.add('클래스명')
+document.querySelector('스타일선택자').classList.remove('클래스명'); */
+
+    document.querySelector('#info').classList.add('pic');
+    document.querySelector('.sub').classList.remove('next')
+</script>
+
+
+<!-- 요약 2 -->
+<script> 
+    //document.querySelector('스타일선택자명').setAttribute('속성명','값')
+    document.querySelector('.cta>a').setAttribute('target','_blank');
+    document.querySelector('.cta>a').setAttribute('href','http://www.naver.com');
+
+    //document.querySelector('스타일선택자명').geyAttribute('속성명')
+    let main;
+    main = document.querySelector('.cta>a').getAttribute('href');
+    console.log(main);
+</script>
+
+
+<!--  요약 3 -->
+    <button type="button">버튼</button>
+    <article id="info">
+      <h4>나의 이름은</h4>
+      <dl>
+        <dt>Name</dt>
+        <dd>Hong Gill-Dong</dd>
+        <dt>Birth</dt>
+        <dd>2020.03.01</dd>
+        <dt>Residence</dt>
+        <dd class="sub next">Seoul Korea</dd>
+        <dt>Major</dt>
+        <dd>Web Design / Publishing</dd>
+        <dt>Skills </dt>
+        <dd>Photoshp, Illustrator,Html5, CSS3, Javascript, jQuery</dd>
+      </dl>
+    </article>
+<script>
+    let room;
+    room = document.querySelector('dd:nth-child(4)').innerHTML;
+    console.log(room);
+
+
+
+    // document.querySelector('선택자').onclick=function(){};
+    document.querySelector('button').onclick = function(){
+    document.querySelector('.sub').innerHTML = '대한민국 서울특별시';
+    }
+</script>
+
+
+<!--  요약 4 -->
+<script>
+    //변수 -> 선언 -> 초기화
+    let main;
+    main = 'welcome'
+    
+    console.log(main);
+    
+    // 2. 단축
+    let num = 5;
+    let sum = 10;
+    
+    console.log(num + sum);
+    
+    // 3. 메모리 -> 데이터 여러 데이터
+    let sam = '123';
+    let no = 123;
+    
+    console.log(sam + no);
+    console.log(sam * no);
+    
+    // 4. 재할당 -> 할당 값을 변경 / const 는 변경 안 됨.
+    let dif = 'welcome';
+    console.log(dif);
+    dif = 'love';
+    console.log(dif);
+    
+    // 5. 재할당이 불가능한 경우 (상수)
+    const str = 5;
+    str = 'love'; 
+    // 에러 남.
+    </script>
+
+
+    <!--  요약 5 -->
+<script>
+    /*데이터 정리 여러 방법*/
+    //  indexing 작업하기(번호)
+    let num = [1,2,3,4,'flower'];
+    console.log(num);
+    console.log(num[0]);
+    console.log(num[2]);
+    num[2] = '지리산';
+    console.log(num[2]);
+        
+    //  키의 이름데이터, 체계 만들기-> . 사용법
+    let myCat = {
+        name : 'Kong',
+        color : 'black',
+        age : 8
+    }
+    console.log(myCat);
+    console.log(myCat.name);
+    console.log(myCat.color);
+    console.log(myCat.age);
+        
+    myCat.age = '9'; // 8을 9로 재할당
+    console.log(myCat);
+        
+    // 이름법 ['괄호법']
+    console.log(myCat['age']);
+</script>
+
+
+
+ <!--  요약 6 -->
+<script>
+{
+    var i = 2;
+    {
+        var i = 'love';
+        console.log(i); // love 가 나온다.
+    }
+    console.log(i); // love 가 나온다.
+}
+{
+let j = 'a';
+{
+    let j = 'flower';
+    console.log(j); //flower 가 나온다.
+}
+console.log(j); // a 가 나온다.
+}
+/*
+데이터 선언하기
+1. let 선언
+2. var 선언
+3. const 선언
+*/
+</script>       
+
+
+
+ <!--  요약 6 -->
+ <script>
+    // 전역변수, 지역변수
+    let i = 1;
+        {
+            let a = 'flower';
+            console.log(a); // flower
+            console.log(i); // 1
+        }
+    console.log(i); // 1
+    console.log(a); // 에러 뜸 ; 지역에서 생성한 변수는 해당 지역을 벗어나면 못 씀.
+    </script>  
+
+
+
+ <!--  요약 7 -->
+ <script>
+    let main = 3;
+    let num = '3';
+    let str = 'flower'; 
+    let room ;
+    let bool = 3 > 5;
+
+    console.log(typeof main); // number
+    console.log(typeof num); // string
+    console.log(typeof str); // string
+    console.log(main); // 3
+    console.log(str); // flower
+    console.log(typeof room); // undefined
+    console.log(room); // undefined
+    console.log(typeof bool); // boolean
+    console.log(main + num); // 33
+    console.log(typeof (main + num)); // string
+    // 타입 에러 예시 ; 덧셈은 문자 숫자 인식 잘 하는데, 곱하기 나누기 하면 그냥 둘다 숫자로 봄.
+    console.log(main * num); // 9
+    console.log(main / num); // 1
+    console.log(typeof (main *num)); // number
+    
+    let a = null;
+    let b = 'love'
+    console.log(typeof a); // object
+    console.log(a); // null
+
+    b = null;
+    console.log(b); // null
+    console.log(typeof b); // object
+</script>  
+
+
+
+ <!--  요약 8 ; 변수의 성격과 주의사항 -->
+ <script>
+    let num = 5;
+    let sum;
+
+    // 에러가 앞에서 나버리면 그 후로는 싹 다 작업 안됨. 에러 남.
+    console.log(sample);                                            
+    console.log(num);
+    console.log(sum);
+
+
+
+//undefined = 데이터를 알 수 없다.
+//not defined = 메모리에 값이 없다. -> error 처리.
+
+</script>
+
+
+
+ <!--  요약 9 ; 데이터의 형의 변화 -->
+ <script>
+  
+    let num = 123;
+    let str = '123';
+
+    console.log(num + str); //'123' + '123' = 123123
+    console.log(num + parseInt(str)); // 123 + 123 = 246
+    console.log(num + Number(str)); // 123 + 123 = 246
+
+
+    let sum = 234;
+    console.log(num + String(sum)); // '123' + '234' = 123234
+
+    //논리 데이터
+    let x = 0;
+    let y ;
+    console.log(Boolean(x));
+    console.log(Boolean(y));
+
+
+    //parseInt(문자형) -> 숫자형
+    //Number (모든 데이터) -> 숫자형
+
+</script>
+
+
+
+ <!--  요약 10 ; 산술 연산자 -->
+ <script>
+    const num01 = 10;
+    const num02 = 20;
+    const num03 = 3;
+
+    console.log(num01 + num02); // 30
+    console.log(num01 - num02); // -10
+    console.log(num01 * num02); // 200
+    console.log(num02 / num03); // 6.66666
+    console.log(num01 % num03); // 1 ; 10/3 = 9 인데 남은 게 1이니까 그래서 1.
+
+
+
+    console.log(2 * (3 * 2));
+    console.log(2 ** 3); // 제곱 수
+    
+    console.log(4 / 2);
+    console.log(4 / '2'); // 8
+    console.log(4 * '2'); // 8
+    console.log(4 % '2'); // 8
+    
+    const a = '3';
+    console.log(4 * a); // 12
+
+    console.log(4 % 'two'); //NaN : 계산에 문제가 생겼군 이라고 생각 하면 됨.
+</script>
+
+
+
+ <!--  요약 11 ; 복합 대입 연산자 -->
+ <script>
+    let a = 10;
+    console.log(a += 2); //12
+    console.log(a); //12
+    console.log(a -= 2); // 10
+    console.log(a); // 10
+    console.log(a *= 2); //20
+    console.log(a /= 2); // 10
+    console.log(a %= 2); // 0
+</script>
+<!--
++=  ,  -=  ,  *=  ,  /=  ,  %=
+
+1. 복합 대입연산자는 언제 사용이 되나요.
+ :  기존에 있는 데이터 값을 변경해서 
+    새로운 값을 생성 할 때. -->
+
+
+
+<!--  요약 12 ; 증감 연산자 -->
+<script>
+    let a = 1;
+    let b = 1;
+    let c = 1;
+    
+    
+    console.log('선증가');
+    console.log(++ a); // 2
+    console.log(++ a); // 3
+    console.log(++ a); // 4
+    console.log(a); // 4
+    
+    console.log('후증가');
+    console.log(b ++); // 1
+    console.log(b ++); // 2
+    console.log(b ++); // 3
+    console.log(b); // 4
+    
+    
+    console.log('2씩 증가');
+    console.log(c += 2); // 3
+    console.log(c += 2); // 5
+    console.log(c += 2); // 7
+    
+    
+    </script>
+    <!--
+    1. 증가 감소 연산자
+    2. 선증감, 후증감의 차이
+    -->
+
+
+
+<!--  요약 13 ; 결합 연산자 -->
+<script>
+    //결합, 산술
+    console.log('결합,산술');
+    console.log(3 + 4); // 산술 // 넘버형 // 7
+    console.log(3 + 4+ '5'); // 산술 -> 결합 // 스트링 // 75
+    console.log('10' + 3 + 4); // 결합 -> 결합 // 스트링 // 1034 
+    console.log(3 + 4 + '5' + 3 + 5); // 산술 -> 결합 -> 결합 -> 결합 // 스트링 // 7535
+    console.log(3 + true); // 넘버형 // 4
+    console.log(3 + false); // 넘버형 // 3
+    // true = 1
+    // false = 0
+
+    const main = 5;
+    console.log(3 + main); // 산술 // 넘버형 // 8
+    console.log((3 + 4) + '5' + (3 + 5)); // 묶으면 결합 다음이더라도 산술 가능하므로 // 758 임
+
+  </script>
+  <script>
+    // 연결 연산자
+    const sum = 20;
+    const str = 'flower';
+    console.log(sum , str); // 20 'flower'
+    console.log(sum + str); // 20flower 
+    document.write(sum , str, '<br>'); 
+    console.log(3 + 5 , '5' , 3 + 5); // 8'5'8
+  </script>
+  <script>
+    // 배틱 => 스트링 출력
+    console.log('배틱');
+    const sum1 = 30;
+    const sum2 = 'flower';
+    let i = 11;
+    console.log(`string ${5 * 3} ${sum2} 지리산`);
+    console.log('string' + (5 * 3) + sum2 + '지리산');
+    console.log(`설악산 ${sum2} : ${sum1 * 2} : ${i}`);
+    
+    document.write(
+      `
+      <p>
+    <img src="../img/car${i}.jpg" alt="${sum2}">
+      </p>
+      `
+    )
+ 
+    // `` : 영역 만들기 -> 특별한 데이터가 필요한 경우 ; ${} 으로 영역을 구분함.
+    // 숫자 계산, 변수 작업, 식계산
+  </script>
+  
+  
+  
+  
+  <script>
+// 다른 데이터형들이 있을 때, 같이 작업을 하는 경우 사용.
+// + , 출력 -> string, number
+// + 가 산술 연산자인지, 결합 연산자인지? (거의 대부분이 결합일 가능성이 있음)
+// 산술 -> 연산자의 양쪽이 넘버형인 경우, ex : 2 + 3  -> 5 -> number 임
+// 연산자 앞 쪽에 결합 -> 그 다음은 쭉 결합 2 + 3 + '지리산' = 5지리산 -> string 임
+// 2 + 3 + '3' + 2 + 3 = 5323 -> string 임
+// '지리산' + 3 = 지리산3
+  </script>
+
+
+
+
+<!--  요약 14 ; 비교 연산자 -->
+<script>
+    // > , < , >= , <= 
+    // === -> 일치 (전부), !== -> 불일치 (전부)  
+    // == -> 동등, != -> 동등하지 않음
+      const a = 20;
+      const b = 10;
+      const c = '10';
+  
+      console.log(a > b);
+      console.log(b < a);
+      console.log(a < b);
+      console.log(b === c);
+      console.log(b == c);
+      console.log(b !== c);
+      console.log(b != c);
+  
+      // 사례
+      console.log('0' === '');
+      console.log(0 == '');
+      console.log(false === 'false');
+      console.log(false == 'false');
+      console.log(false === null);
+      console.log(false === undefined);
+      console.log(NaN === NaN);
+    </script>
+
+
+
+<!--  요약 15 ; 논리 연산자 -->
+<script>
+    let id = 'abc';
+    let pw = '1004'
+
+    let userId = 'abc';
+    let userPw = '1000';
+
+
+    console.log(id === userId && pw === userPw); // false
+    console.log(id === userId || pw === userPw); // true
+    
+    let com = true;
+    console.log(! com); // false
+    console.log(com === (! com)); // false
+    console.log(com = (! com)); // false
+    console.log(com); // false
+    console.log( !! com); // false
+    console.log(com); // false
+  </script>
+
+
+
+<!--  요약 16 ; 논리 연산자 -->
+<script>
+    console.log('and');
+    console.log(true && true); // true
+    console.log(true && 'dog'); // dog
+    console.log('dog' && 'cat'); // cat
+    console.log('dog' || 'cat'); // dog
+    console.log(false && 'cat'); // false
+    
+    console.log('or');
+    console.log(true || true); // true
+    console.log('dog' || 'cat'); // dog
+    console.log(false || 'dog'); // dog
+    console.log(0 || 'cat'); // cat
+      </script>
+
+
+
+<!--  요약 17 ; 삼항 연산자 -->
+<script>
+    //형식 : 조건 ? 트루 실행 : 폴스 실행 ;
+  
+    let i = 30;
+    let j = 14;
+    i > j ? console.log('i 가 크다') : console.log('i가 작다');
+  
+    let a = 20;
+    let b = 30;
+  
+    //const str = a > b -> 결과 a 출력, b 출력
+    const str = a > b ? 'a' : 'b';
+    console.log(str);
+  
+    </script>
+
+
+
+<!--  요약 18 ; if 문 -->
+<script>
+    //if(조건){조건이 참 일 때 실행문} 
+    //else{조건이 참이 아닐 때 실행문}
+let age = 15;
+if(age >= 20 && age <= 40){
+    console.log('welcome')
+} else{console.log('go away')}
+</script>
+
+
+
+<!--  요약 19 ; if 문 2 -->
+<script>
+    let class01 = 60;
+    let class02 = 85;
+    let class03 = 66;
+
+    if(class01 >= 60 && class02 >= 60 && class03 >= 60){
+        console.log('통과 되었습니다.')
+    } else{console.log('불합격 되었습니다.')}
+
+
+
+
+    /* if(조건1){조건1 참일 때 실행문}
+        else if(조건2){조건2 참일 때 실행문}
+        else if(조건3){조건3 참일 때 실행문}
+        else{마지막 남은 else 조건 실행문}
+        */
+
+//조건: 국어(class01) 수학(class02)  영어(class03):세 과목 모두 60점 이상 통과
+//참: '통과 되었습니다.'출력
+//거짓:'불합격 되었습니다.' 출력
+</script>
+
+
+
+<!--  요약 20 ; if 문 3 -->
+<script>
+    //let member = 4;
+    let member = prompt('번호를 입력 하세요','회원은 1, 비회원은 2, 초대장 깜빡했다면 3, 잡상인은 4');
+
+    if(member === '1'){
+        console.log('쿠폰이 발행 되었습니다.')
+    } else if(member === '2'){
+        console.log('회원가입만 해주쇼')
+    } else if(member === '3'){
+        console.log('응 초대장 다시 가서 가져와 ㅅㅂ아~')
+    } else {console.log('넌 뭔데 여기 옴?')}
+
+</script>
+
+
+
+<!--
+//조건: 회원이면 :1, 비회원(초대장 소지):2, 비회원(초대장 미소지):3
+//조건1: 참: '쿠폰이 발행되었습니다.' 출력
+//조건2:  '쿠폰이 발행되었습니다. 회원등록 해 주시면 더욱 좋은 서비스를 제공해 드립니다." 
+//조건3: '회원이 되시면 많은 서비스가 기다리고 있습니다.'
+-->
+
+
+
+<!--  요약 20 ; if 문 3 -->
+<script>
+    let str = prompt('학년을 입력 하세요.','1학년, 2학년, 3학년')
+
+    switch(str){
+        case '1학년' : {document.write('고1은 1층으로 가세요.');
+                    console.log('작업이 끝났습니다.')}
+        break;1
+        case '2학년' : {document.write('고2는 2층으로 가세요.');
+                    console.log('작업이 끝났습니다.')}
+        break;
+        case '3학년' : {document.write('고3은 3층으로 가세요.');
+                    console.log('작업이 끝났습니다.')}
+        break;
+    }
+</script>
+
+
+
+<!--  요약 21 ;  for문  -->
+<script>
+    for(let i =  1 ; i <= 20 ; i ++){
+        document.write('*');
+    }
+    document.write('end');
+
+
+</script>
+<!--
+' * "   20개 출력;
+시작:1;
+결과:20;
+증가:1;
+
+반복이 끝나면 'end' 넣기;-->
+
+
+
+
+
+<!--  요약 22 ;  1~100 더하기  -->
+<script>
+    let hap = 0;
+    for(let i = 1 ; i <= 100 ; i ++){
+        hap += i; // hap = hap + i; 와 같은 뜻
+        
+        // hap = hap + i;
+    }
+    document.write(hap);
+    
+    
+    </script>
+    <!--
+    조건: 1~100까지 합하기
+    시작:1;
+    끝 :100;
+    반복이 끝나면 합 출력하기
+    -->
+
+
+
+
+<!--  요약 23 ;  구구단 만들기  -->
+<script>
+    for(let i = 1 ; i <= 9 ; i ++){
+        document.write(i,'단 입니다. <br>');
+        for(let k = 1 ; k <= 9 ; k ++){
+            document.write(`${i} * ${k} = ${i * k} <br>`)
+        }        
+    }
+        
+</script>
+
+
+
+
+
+<!--  요약 24 ;  for in, for of 문  -->
+<script>
+    const color = ['red','blue','pink','black'];
+    console.log(color[0]);
+
+    for(let i = 0 ; i <= 3 ; i ++){
+        document.write(color[i], '<br>')
+    }
+
+    for(let i in color){
+        document.write(color[i],'<br>');
+    }
+
+    for(let i of color){
+        document.write(i,'<br>');
+    }
+
+// for(let 변수 in 데이터 이름){실행문;} / document.write 에 인덱스 번호 : []
+// for(let 변수 of 데이터 이름){실행문;} / document.write 에 아이템 자체 : i
+</script>
+
+
+
+
+<!--  요약 25 ;  while 문  -->
+<script>
+    let room = 1;
+    while(room <= 10){
+        console.log(room);
+        room ++;
+    }
+    
+    let num = 10;
+    while(num >= 0){
+    document.write(num,'<br>');
+    num --;
+}
+    </script>
+
+
+
+
+<!--  요약 26 ; 'do' while 문  -->
+<script>
+    let num = prompt('번호를 입력 하세요.');
+    
+    do{
+        document.write(num, '<br>');
+        num --;
+    } while(num >= 0);
+</script>
+
+
+
+
+<!--  요약 27 ; 이미지 테스트 1 -->
+<script>
+    for(let i = 1 ; i <= 10 ; i ++){
+        document.write(`<img src="./img/pic${i}.png" alt="이미지${i}">`);
+    }        
+    </script>
+
+
+
+<!--  요약 28 ; 이미지 테스트 2 -->
+<body>
+	<button type="button">이미지</button>
+<p>
+	<img src="img/pic1.png" alt="샘플">
+</p>
+
+<script>
+const btn = document.querySelector('button');
+const img = document.querySelector('p>img');
+
+let i = 1;
+
+btn.onclick = function(){
+	++ i;
+	if(i > 10){
+		i = 1;
+	}
+
+	let pic = `./img/pic${i}.png`;
+	let alt = `이미지${i}`; 
+
+	img.setAttribute('src',pic);
+	img.setAttribute('alt',alt);
+}
+</script>
+
+
+
+
+<!--  요약 29 ; 기타문 -->
+<!-- <script>
+        for(let i = 0; i < 10; i ++){
+            document.write(i,'<br>');
+            break; 
+        }
+    </script> -->
+    <!-- <script>
+        for(let i = 0 ; i < 10 ; i ++){
+            if(i === 3){
+                continue;
+            }
+            document.write(i,'<br>');
+        }
+    </script> -->
+    <script>
+        for(let i = 0 ; i < 10 ; i++){
+            if(i % 2 === 0){
+                continue;
+            }
+            document.write(i,'<br>')
+        }
+
+    </script>
+
+
+
+
+
+<!--  요약 30 ; 함수 만들기 ; line -->
+<!--
+함수 만들기
+함수명: line
+실행문:'*'  20개 그리기
+-->
+</head>
+<body>
+<script>
+    function line(str){
+        for(let i = 1 ; i <= 20 ; i++){
+            document.write(str);
+        }
+        document.write('end<br>')
+    }
+
+    line('a');
+    line('b');
+    line('c');
+</script>
+
+
+
+
+<!--  요약 31 ; 함수 만들기 ; line -->
+<script>
+    function line(a,b){
+        for(let i = 1 ; i <= 20 ; i++){
+            document.write(a+b);
+        }
+        document.write('end<br>');
+    }
+    
+    line('*',',');
+    line('/','|');
+    </script>
+
+
+
+
+<!--  요약 32 ; 함수 만들기 3 -->
+<script>
+    function hap(a,b){
+        let c = a + b; 
+        console.log(c);
+    }
+    function num(a,b){
+        let c = a * b;
+        console.log(c);
+    }
+    
+    hap(123,345);
+    hap(12342,890);
+    hap(11,789);
+    
+    num(23423,234234);
+    num(2,3);
+    num(123,6);
+    </script>
+
+
+
+
+
+<!--  요약 33 ; 리턴 문 -->
+<script>
+    function hap(a,b){
+        let c = a + b;
+        //console.log(c);
+        //리턴 문은 실행문에서 할 거 다 하고, 가장 마지막에 사용해야 함.
+        return c;
+    }
+    
+    console.log(hap(10,20));
+    </script>
+
+
+
+
+<!--  요약 34 ; 호이스팅 -->
+<script>
+    //호이스팅 -> function 이름(){}
+    
+    document.write(hap(5,6),'<br>');
+    function hap(a,b){
+        let c = (a * 2) + (b * 3);
+        return c;
+    }
+     
+    const num = function(a,b){
+        let c = a * b;
+        return c;
+    }
+    document.write(num(5,6),'<br>');
+    
+    
+    </script>
+
+
+
+
+<!--  요약 35 ; -->
+<body>
+    <!--
+    버튼->click->ok함수 불러들이기
+    버튼->click->no함수 불러들이기
+    -->
+    <button type="button" value="ok" onclick="okk('ok')">OK</button>
+    <button type="button" value="no" onclick="no('no')">NO</button>
+    <script>
+    
+    function ok(str){
+        console.log(str);
+    }
+    
+    function no(str){
+        console.log(str)
+    }
+    
+    
+    
+    
+    </script>
+    </body>
+
+
+
+
+
+
+<!--  요약 36 ; -->
+<script>
+    const btn01 = document.querySelector('#btn01');
+    const btn02 = document.querySelector('#btn02');
+   
+    btn01.onclick = ok;
+    btn02.onclick = no;
+   
+    function ok(){
+    console.log('ok');
+    }
+    function no(){
+       console.log('no');
+    }
+   
+   
+   
+    // btn01.onclick = function(){};
+   </script>
+
+
+
+
+<!--  요약 37 ; -->
+<body>
+    <button type="button" value="개나리" id="btn01">개나리</button>
+    <button type="button" value="무궁화" id="btn02">무궁화</button>
+    <button type="button" value="유채꽃" id="btn03">유채꽃</button>
+    
+    <script>
+        const btn01 = document.querySelector('#btn01');
+        const btn02 = document.querySelector('#btn02');
+        const btn03 = document.querySelector('#btn03');
+    
+        btn01.onclick = function(){flower('개나리');}
+        btn02.onclick = function(){flower('무궁화');}
+        btn03.onclick = function(){flower('유채꽃');}
+    
+        function flower(str){   
+            switch(str){
+                case '개나리' : alert('개나리 동호회를 추천 합니다.');
+                break;
+                case '무궁화' : alert('무궁화 동호회를 추천 합니다.');
+                break;
+                case '유채꽃' : alert('유채꽃 동호회를 추천 합니다.')
+            }
+        }
+    </script> 
+    
+    
+    
+    <!-- <script>
+    function 무궁화(str){
+        alert('무궁화 동호회를 추천 합니다.')
+    }
+    
+    function 장미(str){
+        alert('무궁화 동호회를 추천 합니다.')
+    }
+    
+    function 국화(str){
+        alert('무궁화 동호회를 추천 합니다.')
+    }
+    </script> -->
+    <!--버튼클릭->함수 order에 '무궁화'보내기
+     버튼클릭->함수 order에 '장미'보내기 
+    버튼클릭->함수 order에 '국화'보내기-->
+    </body>
+    
+
+
+    <!--  요약 37 ; 함수 정리 -->
+    <script>
+        // 이름있는 함수
+        function num (a){
+          let result = a * 3;
+          return result;
+        }
+        console.log(num(30));
+    
+        // 이름 없는 함수
+    const room = function(b){
+      let result = b / 5;
+      return result;
+    }
+    console.log(room(10));
+    
+        // 함수식
+    //함수식 1  ((){})()
+    (function(a){
+      let result = a * 45;
+      console.log(`함수식1 ${result}`)
+    })(3);
+    
+    //함수식 2 ((){}())
+    (function(b){
+      let result = b * 2;
+      console.log(`함수식2 ${result}`)
+    }(5));
+    
+    
+    //함수식 3
+    const sub = (function(){
+      let result = 3 * 5;
+      return result;
+    })()
+    console.log(sub);
+</script>
+
+
+
+    <!--  요약 37 ; 화살표 함수 1 -->
+    <script>
+        // 기본형 : 선언 이름 = (매개변수) => {실행문;}
+        // 매개변수가 없는 경우 : 선언 이름 = () => {실행문;}
+        // 매개변수가 1개 : 선언 이름 = 매개변수 => {실행문;}    
+        // 매개변수가 2개 이상 : 선언 이름 = (매개변수, 매개변수) => {실행문;}
+  
+        const main = function (){
+           console.log('main');
+        }
+        main();
+        
+        // 화살표함수인데 매개변수 없는 거 
+        const main1 = () => {
+           console.log('main1');
+        }
+        main1();
+  
+        // 화살표함수인데 매개변수가 1개 일 때
+        const main2 = a => {
+           console.log(a)         
+        }
+        main2('welcome');
+  
+        // 매개변수 2개 이상 
+        const main3 = (a,b) => {
+           console.log(a+b);
+        }
+        main3(5,10);
+  
+        // {} 실행문이 1줄인 경우는 중괄호 생략 가능
+  
+  
+     </script> 
+
+
+
+    <!--  요약 38 ; 화살표 함수 2 -->
+    <script>
+        //const main = (a,b) => {console.log(a+b); }
+        const main = (a,b) => console.log(a+b);
+    
+        main(3,5);
+    
+        //실행문이 한 줄, 근데 그 한 줄이 return 문인 경우, return 명령어 생략 가능
+        //const main2 = a => {return a * 2}
+        const main2 = a => a * 2
+        console.log(main2(5));
+    
+    
+    
+        //{키의 값, 데이터}를 가지고 return 내보내기
+        // const main3 = a => {return{b:a}}
+        const main3 = a => ({b:a});
+        console.log(main3(25));
+     
+        //매개변수 설정
+        function sub(a,b = 3){
+          let c = a + b;
+          return c; 
+        }
+    
+        console.log(sub(5));
+    
+    
+    
+        function sub2(a,b = true){
+          //let c = a && b;
+          let c = a || b;
+          return c;
+        }
+     
+        console.log(sub2(5));
+      </script>
+
+
+
+    <!--  요약 39 ; 함수식 정리 -->
+      함수식 : 
+      (function(){})()
+      (function(){}());
+
+      호이스팅 : 이름 있는 함수는 호이스팅이 가능함
+
+      
+      <!-- 화살표 함수  -->
+      선언 이름 = () => {}
+      선언 이름 = 매개변수 => {}
+      선언 이름 = (매개변수,매개변수) => {}
+
+      <!-- 리턴 문 - -->
+      선언 이름 = () => 실행문
+      선언 이름 = () => 실행문 
+      선언 이름 = () => ({a:b})
+
+      객체 : object 
+      내장 객체
+      사용자 객체
+
+
+ <!--  요약 40 ; shift, unshift, splice, slice -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date</title>
+</head>
+
+<body>
+  <!-- 년도월일 -->
+<p>
+<span class="d01"></span>년 
+<span class="d02"></span>월
+<span class="d03"></span>일
+<span class="d04"></span>
+</p>
+<!-- 시간 -->
+<p>
+ <span class="t01">오전 01</span>시 : 
+  <span class="t02">03</span>분:
+  <span class="t03">05</span>초 
+</p>
+
+
+<script>
+  timer();
+  setInterval(timer,1000);
+  function timer(){
+  const today = new Date();
+  const num = ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'];
+  document.querySelector('.d01').innerHTML = today.getFullYear();
+  document.querySelector('.d02').innerHTML = today.getMonth() + 1;
+  document.querySelector('.d03').innerHTML = today.getDate();
+  const yoil = today.getDay();
+  document.querySelector('.d04').innerHTML = num[yoil];
+
+  const hr = document.querySelector('.t01');
+  const min = document.querySelector('.t02');
+  const sec = document.querySelector('.t03');
+
+  let tt= today.getHours();
+  let tm = today.getMinutes();
+  let ts = today.getSeconds();
+  
+  tt = 13;
+
+  // hr.innerHTML = tt;
+  if(tt >= 12){
+    // hr.innerHTML = `오후 ${tt-12}`;
+    if(tt === 12){
+      hr.innerHTML = `오후 12`
+    }else{
+    hr.innerHTML = tt-12 < 10 ? `오후 0${tt-12}` : `오후${tt-12}`;
+  }
+  }else{
+    hr.innerHTML = tt < 10 ? `오전 0${tt}` : `오전${tt}`
+  }
+
+  
+  // min.innerHTML = tm
+  min.innerHTML = tm < 10 ? `0${tm}` : tm ;
+
+  // sec.innerHTML = ts
+  sec.innerHTML = ts < 10 ? `0${ts}` : ts ;
+  }
+
+</script>
+</body>
+</html>

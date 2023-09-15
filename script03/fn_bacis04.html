@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>호이스팅</title>
+</head>
+<body>
+<script>
+//호이스팅 -> function 이름(){}
+
+document.write(hap(5,6),'<br>');
+function hap(a,b){
+    let c = (a * 2) + (b * 3);
+    return c;
+}
+ 
+const num = function(a,b){
+    let c = a * b;
+    return c;
+}
+document.write(num(5,6),'<br>');
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>화살표함수</title>
+</head>
+<body>
+   <script>
+      // 기본형 : 선언 이름 = (매개변수) => {실행문;}
+      // 매개변수가 없는 경우 : 선언 이름 = () => {실행문;}
+      // 매개변수가 1개 : 선언 이름 = 매개변수 => {실행문;}    
+      // 매개변수가 2개 이상 : 선언 이름 = (매개변수, 매개변수) => {실행문;}
+
+      const main = function (){
+         console.log('main');
+      }
+      main();
+      
+      // 화살표함수인데 매개변수 없는 거 
+      const main1 = () => {
+         console.log('main1');
+      }
+      main1();
+
+      // 화살표함수인데 매개변수가 1개 일 때
+      const main2 = a => {
+         console.log(a)         
+      }
+      main2('welcome');
+
+      // 매개변수 2개 이상 
+      const main3 = (a,b) => {
+         console.log(a+b);
+      }
+      main3(5,10);
+
+      // {} 실행문이 1줄인 경우는 중괄호 생략 가능
+
+
+   </script> 
+</body>
+</html>

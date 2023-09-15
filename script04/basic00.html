@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>복수선택하기</title>
+</head>
+
+<body>
+    <ul>
+        <li>num01</li>
+        <li>num02</li>
+        <li>num03</li>
+        <li>num04</li>
+        <li>num05</li>
+      </ul>
+
+<div>
+    <p class="no01">1</p>
+    <p class="no01">2</p>
+    <p class="no01">3</p>
+</div>
+<script>
+    //const li = document.querySelector('ul>li'); 맨 앞에 자식만 됨
+    const li = document.querySelectorAll('ul>li');
+    console.log(li);
+    li[1].style.color = 'red';
+
+    const no01 = document.getElementsByClassName('no01');
+    console.log(no01);
+    no01[2].style.color = 'green'; 
+    
+</script>
+</body>
+
+
+
+</html>

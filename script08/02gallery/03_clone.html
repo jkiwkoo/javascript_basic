@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <title>복제하기</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                width: 100px;
+                border: 2px solid #000;
+                margin: 20px auto;
+            }
+            p {
+                width: 100px;
+                height: 100px;
+                background-color: #81f482;
+                margin-bottom: 10px;
+                border: 2px solid red;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="text">clone</button>
+        <div id="all">
+            <p id="box"></p>
+        </div>
+        <script>
+            const box = document.querySelector('#box');
+            const btn = document.querySelector('button');
+            btn.onclick = function () {
+                const clone = box.cloneNode(true);
+                document.querySelector('#all').append(clone);
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>실행문의 그룹 만들기</title>
+    </head>
+    <body>
+        <button type="button">버튼</button>
+        <article id="info">
+            <h4>나의 이름은</h4>
+            <dl>
+                <dt>Name</dt>
+                <dd>Hong Gill-Dong</dd>
+                <dt>Birth</dt>
+                <dd>2020.03.01</dd>
+                <dt>Residence</dt>
+                <dd class="sub next">Seoul Korea</dd>
+                <dt>Major</dt>
+                <dd>Web Design / Publishing</dd>
+                <dt>Skills</dt>
+                <dd>Photoshp, Illustrator,Html5, CSS3, Javascript, jQuery</dd>
+            </dl>
+        </article>
+        <script>
+            /* 속성 사용하기2
+            1. 이벤트 연결하기 -> on+이벤트명
+            2. 실행문의 그룹 만들기 */
+
+            let room;
+            room = document.querySelector('dd:nth-child(4)').innerHTML;
+            console.log(room);
+
+            // document.querySelector('선택자').onclick=function(){};
+
+            document.querySelector('button').onclick = function () {
+                document.querySelector('.sub').innerHTML = '대한민국 서울특별시 강남구 청담동';
+                document.querySelector('h4').innerHTML = '태연의 프로필';
+                document.querySelector('dd:nth-child(2)').innerHTML = '태연';
+            };
+        </script>
+    </body>
+</html>

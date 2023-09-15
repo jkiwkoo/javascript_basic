@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>화살표함수2</title>
+</head>
+<body>
+  <script>
+    //const main = (a,b) => {console.log(a+b); }
+    const main = (a,b) => console.log(a+b);
+
+    main(3,5);
+
+    //실행문이 한 줄, 근데 그 한 줄이 return 문인 경우, return 명령어 생략 가능
+    //const main2 = a => {return a * 2}
+    const main2 = a => a * 2
+    console.log(main2(5));
+
+
+
+    //{키의 값, 데이터}를 가지고 return 내보내기
+    // const main3 = a => {return{b:a}}
+    const main3 = a => ({b:a});
+    console.log(main3(15));
+ 
+    //매개변수 설정
+    function sub(a,b = 3){
+      let c = a + b;
+      return c; 
+    }
+    console.log(sub(5));
+    
+
+
+    function sub2(a,b = true){
+      //let c = a && b;
+      let c = a || b;
+      return c;
+    }
+ 
+    console.log(sub2(5));
+
+
+
+
+
+
+  </script>
+</body>
+</html>

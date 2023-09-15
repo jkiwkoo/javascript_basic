@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>reduce()</title>
+</head>
+<body>
+ <script>
+const num = [1,2,3,4,5];
+const sum = num.reduce(function(hap,item,index){
+    return hap + (item * 2);
+},0)
+console.log(sum);
+
+
+
+const arr = [13,40,90,67,22,141,1515];
+//최대값
+const isMax = arr.reduce(function(total,item){
+    return (total > item) ? total : item;
+},0)
+
+//최소값
+const isMin = arr.reduce(function(total, item){
+    return (total < item) ? total : item;
+})
+
+console.log(isMin);
+
+
+//최대값, 최소값 -> 삼항연산자
+
+
+
+ </script>
+</body>
+</html>
+
+ 2
+ 6
+ 12
+ 20
+ 30
+
+

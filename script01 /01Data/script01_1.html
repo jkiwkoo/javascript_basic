@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>데이터할당</title>
+    </head>
+    <body>
+        <p>sample</p>
+        <script>
+            /*데이터 정리 여러 방법*/
+            //  indexing 작업하기(번호)
+            let num = [1, 2, 3, 4, 'flower'];
+            console.log(num);
+            console.log(num[0]);
+            console.log(num[2]);
+            num[2] = '지리산';
+            console.log(num[2]);
+
+            //  키의 이름데이터, 체계 만들기-> . 사용법
+            let myCat = {
+                name: 'Kong',
+                color: 'black',
+                age: 8,
+            };
+            console.log(myCat);
+            console.log(myCat.name);
+            console.log(myCat.color);
+            console.log(myCat.age);
+
+            myCat.age = '9'; // 8을 9로 재할당
+            console.log(myCat);
+
+            // 이름법 ['괄호법']
+            console.log(myCat['age']);
+        </script>
+    </body>
+</html>

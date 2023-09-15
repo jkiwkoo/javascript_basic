@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>비교</title>
+    </head>
+    <body>
+        <script>
+            // > , < , >= , <=
+            // === -> 일치 (전부), !== -> 불일치 (전부)
+            // == -> 동등, != -> 동등하지 않음
+            const a = 20;
+            const b = 10;
+            const c = '10';
+
+            console.log(a > b);
+            console.log(b < a);
+            console.log(a < b);
+            console.log(b === c);
+            console.log(b == c);
+            console.log(b !== c);
+            console.log(b != c);
+
+            // 사례
+            console.log('0' === '');
+            console.log(0 == '');
+            console.log(false === 'false');
+            console.log(false == 'false');
+            console.log(false === null);
+            console.log(false === undefined);
+            console.log(NaN === NaN);
+        </script>
+    </body>
+</html>

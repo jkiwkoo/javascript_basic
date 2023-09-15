@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>img</title>
+</head>
+<body>
+	<button type="button">이미지</button>
+<p>
+	<img src="img/pic1.png" alt="샘플">
+</p>
+
+<script>
+/*const btn = document.querySelector('button');
+const img = document.querySelector('p>img');
+
+let i = 1;
+
+btn.onclick = function(){
+	i ++;
+	if(i > 10){
+		i = 1
+	};
+
+	let pic = `img/pic${i}.png`;
+	let alt = `이미지${i}`;
+
+img.setAttribute('src', pic);
+img.setAttribute('alt', alt);
+}*/
+
+const btn = document.querySelector('button');
+const img = document.querySelector('p>img');
+
+let i = 1;
+btn.onclick = function(){
+	i ++;
+	if(i > 10){
+		i = 1
+	};
+
+	let pic = `img/pic${i}.png`;
+	let alt = `image${i}`;
+
+	img.setAttribute('src',pic);
+	img.setAttribute('alt',alt);
+}
+
+
+
+
+</script>
+</body>
+</html>

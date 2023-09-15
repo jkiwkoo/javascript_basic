@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>creatElement</title>
+
+  </head>
+  <body>
+    <p><button type="button">복사하기</button></p>
+    <div id="content">
+      <div>
+        <h1>오늘 할 일</h1>
+        <ol id="today">
+          <li>javascript</li>
+          <li>html</li>
+          <li>css</li>
+        </ol>
+        <h1>내일 할 일</h1>
+        <ol id="tomorrow">
+          <li>청소</li>
+          <li>뮤지컬 공연 예매</li>
+          <li>휴식</li>
+        </ol>
+      </div>
+    <script>
+      const today = document.querySelector('#today');
+      const tom = document.querySelector('#tomorrow');
+      const btn = document.querySelector('button');
+
+      btn.onclick = play;
+
+      function play(){
+        const clone = today.cloneNode(true);
+      tom.after(clone);
+      tom.children[0].remove();
+      }
+    </script>
+  </body>
+</html>
