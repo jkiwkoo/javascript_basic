@@ -1,32 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>for in, for of 문</title>
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <title>for in, for of 문</title>
+    </head>
 
-<body>
-<script>
-    const color = ['red','blue','pink','black'];
-    console.log(color[0]);
+    <body>
+        <script>
+            const color = ['red', 'blue', 'pink', 'black'];
+            console.log(color[0]);
 
-    for(let i = 0 ; i <= 3 ; i ++){
-        document.write(color[i], '<br>')
-    }
+            for (let i = 0; i <= 3; i++) {
+                document.write(color[i], '<br>');
+            }
 
-    for(let i in color){
-        document.write(color[i],'<br>');
-    }
+            for (let i in color) {
+                document.write(color[i], '<br>');
+            }
 
-    for(let i of color){
-        document.write(i,'<br>');
-    }
+            for (let i of color) {
+                document.write(i, '<br>');
+            }
 
-// for(let 변수 in 데이터 이름){실행문;} / document.write 에 인덱스 번호 : []
-// for(let 변수 of 데이터 이름){실행문;} / document.write 에 아이템 자체 : i
-
-
-
-</script>
-</body>
+            // for(let 변수 in 데이터 이름){실행문;} / document.write 에 인덱스 번호 : []
+            // for(let 변수 of 데이터 이름){실행문;} / document.write 에 아이템 자체 : i
+        </script>
+    </body>
 </html>
