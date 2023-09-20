@@ -1,40 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>switch문</title>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8" />
+        <title>switch문</title>
+    </head>
+    <body>
+        <script>
+            /*             const str = 3;
+            switch (str) {
+                case 1:
+                    {
+                        console.log(1);
+                    }
+                    break;
+                case 2:
+                    {
+                        console.log(2);
+                    }
+                    break;
+                case 3:
+                    {
+                        console.log(3);
+                    }
+                    break;
+                default: {
+                    console.log('해당값이 없습니다');
+                }
+            } */
+            const room = prompt(
+                '학년 별로 해당 숫자를 입력 하세요',
+                '1학년 : 1, 2학년 : 2, 3학년 : 3, 그 외 : 4'
+            );
 
-<script>
-    let str = prompt('학년을 입력 하세요.','1학년, 2학년, 3학년')
+            switch (room) {
+                case '1':
+                    {
+                        console.log('1층으로 가세요.');
+                    }
+                    break;
+                case '2':
+                    {
+                        console.log('2층으로 가세요.');
+                    }
+                    break;
+                case '3':
+                    {
+                        console.log('3층으로 가세요.');
+                    }
+                    break;
+                case '4':
+                    {
+                        console.log('출입 하실 수 없습니다.');
+                    }
+                    break;
+            }
+        </script>
 
-    switch(str){
-        case '1학년' : {document.write('고1은 1층으로 가세요.');
-                    console.log('작업이 끝났습니다.')}
-        break;1
-        case '2학년' : {document.write('고2는 2층으로 가세요.');
-                    console.log('작업이 끝났습니다.')}
-        break;
-        case '3학년' : {document.write('고3은 3층으로 가세요.');
-                    console.log('작업이 끝났습니다.')}
-        break;
-    }
-</script>
-
-<!--
+        <!--
 조건: 학년을 입력하세요.
 //1학년(1) ->'2층으로 가세요. '출력
 //2학년(2) ->'3층으로 가세요. '출력
 //3학년(3) ->'별관으로 가세요. '출력
 //기타       ->1층 안내실로 가세요. '출력
 -->
-
-</body>
+    </body>
 </html>
-
-
-
-
-
-
